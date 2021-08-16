@@ -17,9 +17,9 @@ import WebViewer from '@pdftron/webviewer';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements AfterViewInit {
+export class AppComponent {
   title = 'fileUpload'
-  @ViewChild('viewer') viewerRef: ElementRef;
+  // @ViewChild('viewer') viewerRef: ElementRef;
   images;
   constructor(private http: HttpClient, private form: FormBuilder) {}
 
@@ -41,14 +41,14 @@ export class AppComponent implements AfterViewInit {
 
     )
   }
-  ngAfterViewInit(): void {
-    WebViewer({
-      path: '../assets/lib',
-      initialDoc: '../assets/files/Sample.pdf',
+  // ngAfterViewInit(): void {
+  //   WebViewer({
+  //     path: '../assets/lib',
+  //     initialDoc: '../assets/files/Sample.pdf',
 
-    }, this.viewerRef.nativeElement).then(instance => {
+  //   }, this.viewerRef.nativeElement).then(instance => {
 
-    })
-  }
+  //   })
+  // }
 
 }
