@@ -25,6 +25,7 @@ export class FileuploadComponent implements AfterViewInit {
   arrayData;
   array;
   index= 42;
+  spinner = false;
   constructor(private http: HttpClient, private form: FormBuilder,private router:Router) {
     this.removeBrackets( '(123)');
   }
@@ -37,23 +38,38 @@ export class FileuploadComponent implements AfterViewInit {
   }
   onSubmit() {
     console.log('upload');
+    this.spinner=true;
     const formData = new FormData();
     formData.append('file', this.images);
     this.http.post < any > ('http://localhost:3000/file', formData).subscribe(
       (res) =>{
+
         this.arrayData = res.response;
      console.log(res.response);
+     this.spinner=false;
     //  this.removeBrackets( res.response)
-        
+
     },
-      (err) => console.log(err),
-    )
+
+      (err) => {
+        console.log(err);
+        this.spinner=false;
+      }
+        )
     // this.router.navigate(['/file']);
- 
- 
+
+
   }
+  hideloader() {
+
+    // Setting display of spinner
+    // element to none
+    document.getElementById('loading')
+        .style.display = 'none';
+}
+
   ngAfterViewInit(): void {
-  
+
     // WebViewer({
     //   path: '../assets/lib',
     //   initialDoc: '../assets/files/Sample.pdf',
@@ -68,14 +84,14 @@ console.log(form.value);
 
   }
 removeBrackets(value){
- 
+
   let splitArray = value.split('');
   splitArray.shift();
   splitArray.pop();
   let removeString = splitArray.join('');
   console.log(removeString);
-  
+
   return removeString;
 }
- 
+
 }
