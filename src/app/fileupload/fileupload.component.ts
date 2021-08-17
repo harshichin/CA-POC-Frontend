@@ -8,7 +8,7 @@ import {
   ElementRef
 } from '@angular/core';
 import {
-  FormBuilder
+  FormBuilder, NgForm
 } from '@angular/forms';
 import { Router } from '@angular/router';
 import WebViewer from '@pdftron/webviewer';
@@ -22,7 +22,12 @@ export class FileuploadComponent implements AfterViewInit {
   title = 'fileUpload'
   @ViewChild('viewer') viewerRef: ElementRef;
   images;
-  constructor(private http: HttpClient, private form: FormBuilder,private router:Router) {}
+  arrayData;
+  array;
+  index= 42;
+  constructor(private http: HttpClient, private form: FormBuilder,private router:Router) {
+    this.removeBrackets( '(123)');
+  }
 
   selectImage(event) {
     if (event.target.files.length > 0) {
@@ -32,18 +37,23 @@ export class FileuploadComponent implements AfterViewInit {
   }
   onSubmit() {
     console.log('upload');
-
     const formData = new FormData();
     formData.append('file', this.images);
     this.http.post < any > ('http://localhost:3000/file', formData).subscribe(
-      (res) => console.log(res),
-      (err) => console.log(err)
-
-
+      (res) =>{
+        this.arrayData = res.response;
+     console.log(res.response);
+    //  this.removeBrackets( res.response)
+        
+    },
+      (err) => console.log(err),
     )
-    this.router.navigate(['/file']);
+    // this.router.navigate(['/file']);
+ 
+ 
   }
   ngAfterViewInit(): void {
+  
     // WebViewer({
     //   path: '../assets/lib',
     //   initialDoc: '../assets/files/Sample.pdf',
@@ -53,4 +63,19 @@ export class FileuploadComponent implements AfterViewInit {
     // })
   }
 
+  generateReport(form:NgForm){
+console.log(form.value);
+
+  }
+removeBrackets(value){
+ 
+  let splitArray = value.split('');
+  splitArray.shift();
+  splitArray.pop();
+  let removeString = splitArray.join('');
+  console.log(removeString);
+  
+  return removeString;
+}
+ 
 }

@@ -7,7 +7,388 @@
           <input type="file" name="image" multiple (change)="selectImage($event)" id="image">
           <button class="btn btn-primary" type="submit" (click)="onSubmit()">Upload</button>
         </div>
-        </div>
+      </div>
+    </div>
+    <div *ngIf="arrayData" class="mt-5 mb-5">
+      <form #Formarray="ngForm" (ngSubmit)="generateReport(Formarray)">
+        <table class="table table-hover">
+          <thead  class="thead-dark">
+            <tr>
+              <th scope="col">{{arrayData[14][0]}}</th>
+              <th scope="col">{{arrayData[14][1]}}</th>
+              <th scope="col">{{arrayData[14][2]}}</th>
+              <th scope="col">{{arrayData[14][3]}}</th>
+              <th scope="col">{{arrayData[14][4]}}</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td>{{arrayData[15][0]}}</td>
+              <td>{{arrayData[15][1]}}</td>
+              <td></td>
+              <td></td>
+              <td><input type="text" name="value154" [(ngModel)]="arrayData[15][2]" required></td>
+            </tr>
+
+            <tr>
+              <td>{{arrayData[16][0]}}</td>
+              <td>{{arrayData[16][1]}}</td>
+              <td></td>
+              <td><input type="text" name="value162" [(ngModel)]="arrayData[16][2]" required></td>
+              
+              <td><input type="text" name="value164" [(ngModel)]="arrayData[16][3]" required></td>
+            </tr>
+
+            <tr>
+              <td>{{arrayData[17][0]}}</td>
+              <td>{{arrayData[17][1]}}</td>
+              <td><input type="text" name="value172" [(ngModel)]="arrayData[17][2]" required></td>
+              <td></td>
+              <td><input type="text" name="value173" [(ngModel)]="arrayData[17][3]" required></td>
+            </tr>
+            <tr>
+              <td>{{arrayData[18][0]}}</td>
+              <td>{{arrayData[18][1]}}</td>
+              <td><input type="text" name="value182" [(ngModel)]="arrayData[18][2]" required></td>
+              <td></td>
+              <td><input type="text" name="value183" [(ngModel)]="arrayData[18][3]" required></td>
+            </tr>
+
+            <tr>
+              <td>{{arrayData[19][0]}}</td>
+              <td>{{arrayData[19][1]}}</td>
+              <td><input type="text" name="value192" [(ngModel)]="arrayData[19][2]" required></td>
+              <td></td>
+              <td><input type="text" name="value193" [(ngModel)]="arrayData[19][3]" required></td>
+            </tr>
+
+            <tr>
+              <td>{{arrayData[20][0]}}</td>
+              <td>{{arrayData[20][1]}}</td>
+              <td><input type="text" name="value202" [(ngModel)]="arrayData[20][2]" required></td>
+              <td></td>
+              <td><input type="text" name="value203" [(ngModel)]="arrayData[20][3]" required></td>
+            </tr>
+
+            <tr>
+              <td>{{arrayData[21][0]}}</td>
+              <td>{{arrayData[21][1]}}</td>
+              <td><input type="text" name="value212" [(ngModel)]="arrayData[21][2]" required></td>
+              <td></td>
+              <td><input type="text" name="value213" [(ngModel)]="arrayData[21][3]" required></td>
+            </tr>
+
+            <tr>
+              <td>{{arrayData[22][0]}}</td>
+              <td>{{arrayData[22][1]}}</td>
+              <td><input type="text" name="value222" [(ngModel)]="arrayData[22][2]" required></td>
+              <td></td>
+              <td><input type="text" name="value223" [(ngModel)]="arrayData[22][3]" required></td>
+            </tr>
+
+            <tr>
+              <td>{{arrayData[23][0]}}</td>
+              <td>{{arrayData[23][1]}}</td>
+              <td><input type="text" name="value232" [(ngModel)]="arrayData[23][2]" required></td>
+              <td></td>
+              <td><input type="text" name="value233" [(ngModel)]="arrayData[23][3]" required></td>
+              
+            </tr>
+
+            <tr>
+              <td>{{arrayData[24][0]}}</td>
+              <td>{{arrayData[24][1]}}</td>
+              <td></td>
+              <td><input type="text" name="value242" [(ngModel)]="arrayData[24][2]" required></td>
+              <td><input type="text" name="value243" [(ngModel)]="arrayData[24][3]" required></td>
+             
+            </tr>
+
+            <tr>
+              <td>{{arrayData[25][0]}}</td>
+              <td>{{arrayData[25][1]}}</td>
+              <td><input type="text" name="value252" [(ngModel)]="arrayData[25][2]" required></td>
+              <td></td>
+              <td><input type="text" name="value253" [(ngModel)]="arrayData[25][3]" required></td>
+            </tr>
+
+            <tr>
+              <td>{{arrayData[26][0]}}</td>
+              <td>{{arrayData[26][1]}}</td>
+              <td><input type="text" name="value262" [(ngModel)]="arrayData[26][2]" required></td>
+              <td></td>
+              <td><input type="text" name="value263" [(ngModel)]="arrayData[26][3]" required></td>
+            </tr>
+
+            <tr>
+              <td>{{arrayData[27][0]}}</td>
+              <td>{{arrayData[27][1]}}</td>
+              <td><input type="text" name="value272" [(ngModel)]="arrayData[27][2]" required></td>
+              <td></td>
+              <td><input type="text" name="value273" [(ngModel)]="arrayData[27][3]" required></td>
+            </tr>
+
+
+            <tr>
+              <td>{{arrayData[28][0]}}</td>
+              <td>{{arrayData[28][1]}}</td>
+              <td><input type="text" name="value282" [(ngModel)]="arrayData[28][2]" required></td>
+              <td></td>
+              <td><input type="text" name="value283" [(ngModel)]="arrayData[28][3]" required></td>
+            </tr>
+
+            <tr>
+              <td>{{arrayData[29][0]}}</td>
+              <td>{{arrayData[29][1]}}</td>
+              <td><input type="text" name="value292" [(ngModel)]="arrayData[29][2]" required></td>
+              <td></td>
+              <td><input type="text" name="value293" [(ngModel)]="arrayData[29][3]" required></td>
+            </tr>
+
+            <tr>
+              <td>{{arrayData[30][0]}}</td>
+              <td>{{arrayData[30][1]}}</td>
+              <td><input type="text" name="value302" [(ngModel)]="arrayData[30][2]" required></td>
+              <td></td>
+              <td><input type="text" name="value303" [(ngModel)]="arrayData[30][3]" required></td>
+            </tr>
+
+            <tr>
+              <td>{{arrayData[31][0]}}</td>
+              <td>{{arrayData[31][1]}}</td>
+              <td><input type="text" name="value312" [(ngModel)]="arrayData[31][2]" required></td>
+              <td></td>
+              <td><input type="text" name="value313" [(ngModel)]="arrayData[31][3]" required></td>
+            </tr>
+
+            <tr>
+              <td>{{arrayData[32][0]}}</td>
+              <td>{{arrayData[32][1]}}</td>
+              <td><input type="text" name="value322" [(ngModel)]="arrayData[32][2]" required></td>
+              <td></td>
+              <td><input type="text" name="value323" [(ngModel)]="arrayData[32][3]" required></td>
+            </tr>
+
+            <tr>
+              <td>{{arrayData[33][0]}}</td>
+              <td>{{arrayData[33][1]}}</td>
+              <td><input type="text" name="value332" [(ngModel)]="arrayData[33][2]" required></td>
+              <td></td>
+              <td><input type="text" name="value333" [(ngModel)]="arrayData[33][3]" required></td>
+            </tr>
+            <tr>
+              <td>{{arrayData[34][0]}}</td>
+              <td>{{arrayData[34][1]}}</td>
+              <td><input type="text" name="value342" [(ngModel)]="arrayData[34][2]" required></td>
+              <td></td>
+              <td><input type="text" name="value343" [(ngModel)]="arrayData[34][3]" required></td>
+            </tr>
+            <tr>
+              <td>{{arrayData[35][0]}}</td>
+              <td>{{arrayData[35][1]}}</td>
+              <td></td>
+              <td><input type="text" name="value352" [(ngModel)]="arrayData[35][2]" required></td>
+              <td><input type="text" name="value353" [(ngModel)]="arrayData[35][3]" required></td>
+              
+            </tr>
+
+
+            <tr>
+              <td>{{arrayData[42][0]}}</td>
+              <td>{{arrayData[42][1]}}</td>
+              <td><input type="text" name="value422" [(ngModel)]="arrayData[42][2]" required></td>
+              <td></td>
+              <td><input type="text" name="value423" [(ngModel)]="arrayData[42][3]" required></td>
+            </tr>
+            
+            
+            
+            <tr>
+              <td>{{arrayData[43][0]}}</td>
+              <td>{{arrayData[43][1]}}</td>
+              <td><input type="text" name="value432" [(ngModel)]="arrayData[43][2]" required></td>
+              <td></td>
+              <td><input type="text" name="value433" [(ngModel)]="arrayData[43][3]" required></td>
+            </tr>
+            
+            
+            
+            <tr>
+              <td>{{arrayData[44][0]}}</td>
+              <td>{{arrayData[44][1]}}</td>
+              <td><input type="text" name="value442" [(ngModel)]="arrayData[44][2]" required></td>
+              <td></td>
+              <td><input type="text" name="value443" [(ngModel)]="arrayData[44][3]" required></td>
+            </tr>
+            
+            
+            
+            <tr>
+              <td>{{arrayData[45][0]}}</td>
+              <td>{{arrayData[45][1]}}</td>
+              <td><input type="text" name="value452" [(ngModel)]="arrayData[45][2]" required></td>
+              <td></td>
+              <td><input type="text" name="value453" [(ngModel)]="arrayData[45][3]" required></td>
+            </tr>
+            
+            
+            
+            <tr>
+              <td>{{arrayData[46][0]}}</td>
+              <td>{{arrayData[46][1]}}</td>
+              <td><input type="text" name="value462" [(ngModel)]="arrayData[46][2]" required></td>
+              <td></td>
+              <td><input type="text" name="value463" [(ngModel)]="arrayData[46][3]" required></td>
+            </tr>
+            
+            
+            
+            <tr>
+              <td>{{arrayData[47][0]}}</td>
+              <td>{{arrayData[47][1]}}</td>
+              <td><input type="text" name="value472" [(ngModel)]="arrayData[47][2]" required></td>
+              <td></td>
+              <td><input type="text" name="value473" [(ngModel)]="arrayData[47][3]" required></td>
+            </tr>
+            
+            
+            
+            <tr>
+              <td>{{arrayData[48][0]}}</td>
+              <td>{{arrayData[48][1]}}</td>
+              <td><input type="text" name="value482" [(ngModel)]="arrayData[48][2]" required></td>
+              <td></td>
+              <td><input type="text" name="value483" [(ngModel)]="arrayData[48][3]" required></td>
+            </tr>
+            
+            
+            
+            <tr>
+              <td>{{arrayData[49][0]}}</td>
+              <td>{{arrayData[49][1]}}</td>
+              <td><input type="text" name="value492" [(ngModel)]="arrayData[49][2]" required></td>
+              <td></td>
+              <td><input type="text" name="value493" [(ngModel)]="arrayData[49][3]" required></td>
+            </tr>
+            
+            
+            
+            <tr>
+              <td>{{arrayData[50][0]}}</td>
+              <td>{{arrayData[50][1]}}</td>
+              <td><input type="text" name="value502" [(ngModel)]="arrayData[50][2]" required></td>
+              <td></td>
+              <td><input type="text" name="value503" [(ngModel)]="arrayData[50][3]" required></td>
+            </tr>
+            
+            
+            
+            <tr>
+              <td>{{arrayData[51][0]}}</td>
+              <td>{{arrayData[51][1]}}</td>
+              <td><input type="text" name="value512" [(ngModel)]="arrayData[51][2]" required></td>
+              <td></td>
+              <td><input type="text" name="value513" [(ngModel)]="arrayData[51][3]" required></td>
+            </tr>
+            
+            
+            
+            <tr>
+              <td>{{arrayData[52][0]}}</td>
+              <td>{{arrayData[52][1]}}</td>
+              <td><input type="text" name="value522" [(ngModel)]="arrayData[52][2]" required></td>
+              <td></td>
+              <td><input type="text" name="value523" [(ngModel)]="arrayData[52][3]" required></td>
+            </tr>
+            
+            
+            
+            <tr>
+              <td>{{arrayData[53][0]}}</td>
+              <td>{{arrayData[53][1]}}</td>
+              <td><input type="text" name="value532" [(ngModel)]="arrayData[53][2]" required></td>
+              <td></td>
+              <td><input type="text" name="value533" [(ngModel)]="arrayData[53][3]" required></td>
+            </tr>
+            
+            
+            
+            <tr>
+              <td>{{arrayData[54][0]}}</td>
+              <td>{{arrayData[54][1]}}</td>
+              <td><input type="text" name="value542" [(ngModel)]="arrayData[54][2]" required></td>
+              <td></td>
+              <td><input type="text" name="value543" [(ngModel)]="arrayData[54][3]" required></td>
+            </tr>
+            
+            
+            
+            <tr>
+              <td>{{arrayData[55][0]}}</td>
+              <td>{{arrayData[55][1]}}</td>
+              <td><input type="text" name="value552" [(ngModel)]="arrayData[55][2]" required></td>
+              <td></td>
+              <td><input type="text" name="value553" [(ngModel)]="arrayData[55][3]" required></td>
+            </tr>
+            
+            
+            
+            <tr>
+              <td>{{arrayData[56][0]}}</td>
+              <td>{{arrayData[56][1]}}</td>
+              <td><input type="text" name="value562" [(ngModel)]="arrayData[56][2]" required></td>
+              <td></td>
+              <td><input type="text" name="value563" [(ngModel)]="arrayData[56][3]" required></td>
+            </tr>
+            
+            
+            
+            <tr>
+              <td>{{arrayData[57][0]}}</td>
+              <td>{{arrayData[57][1]}}</td>
+              <td><input type="text" name="value572" [(ngModel)]="arrayData[57][2]" required></td>
+              <td></td>
+              <td><input type="text" name="value573" [(ngModel)]="arrayData[57][3]" required></td>
+            </tr>
+            
+            
+            
+            <tr>
+              <td>{{arrayData[58][0]}}</td>
+              <td>{{arrayData[58][1]}}</td>
+              <td><input type="text" name="value582" [(ngModel)]="arrayData[58][2]" required></td>
+              <td></td>
+              <td><input type="text" name="value583" [(ngModel)]="arrayData[58][3]" required></td>
+            </tr>
+            
+            
+            
+            <tr>
+              <td>{{arrayData[59][0]}}</td>
+              <td>{{arrayData[59][1]}}</td>
+              <td><input type="text" name="value592" [(ngModel)]="arrayData[59][2]" required></td>
+              <td></td>
+              <td><input type="text" name="value593" [(ngModel)]="arrayData[59][3]" required></td>
+            </tr>
+                    
+            <tr>
+              <th></th>
+              <th>{{arrayData[60][0]}}</th>
+              <th>{{arrayData[60][1]}}</th>
+              <th>{{arrayData[60][2]}}</th>
+              <!-- <th><input type="text" name="value602" [(ngModel)]="arrayData[60][2]" required></th> -->
+              <!-- <th><input type="text" name="value603" [(ngModel)]="arrayData[60][3]" required></th> -->
+            </tr>
+            
+            
+            
+            
+          </tbody>
+        </table>
+      
+        <button class="btn btn-primary float-right mr-5" type="submit">Save</button>
+      </form>
     </div>
   </div>
 
